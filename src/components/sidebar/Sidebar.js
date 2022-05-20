@@ -1,4 +1,4 @@
-import { History, Home, OndemandVideo, Settings, Subscriptions, ThumbsUpDownOutlined, ThumbUpAltOutlined, VideoLibrary, Whatshot } from '@mui/icons-material'
+import {Home, OndemandVideo, Settings, Subscriptions, ThumbUpAltOutlined, Whatshot } from '@mui/icons-material'
 import React from 'react'
 import './styles.css'
 const Sidebar = () => {
@@ -15,14 +15,14 @@ const Sidebar = () => {
             </div>
             <div className='sidebar__btn'>
                 <Subscriptions className="sidebar__icon"/>
-                <p>Subscriptions</p>
+                <p>Following</p>
             </div>
         </div>
         <div className="sidebar__buttons bottom">
-            <div className='sidebar__btn'>
+            {/* <div className='sidebar__btn'>
                 <VideoLibrary className="sidebar__icon"/>
                 <p>Playlists</p>
-            </div>
+            </div> */}
             <div className="sidebar__btn">
                 <ThumbUpAltOutlined className="sidebar__icon"/>
                 <p>Liked Videos</p>
@@ -31,10 +31,10 @@ const Sidebar = () => {
                 <OndemandVideo className="sidebar__icon"/>
                 <p>Your Videos</p>
             </div>
-            <div className='sidebar__btn'>
+            {/* <div className='sidebar__btn'>
                 <History className="sidebar__icon"/>
                 <p>History</p>
-            </div>
+            </div> */}
             <div className='sidebar__btn'>
                 <Settings className="sidebar__icon"/>
                 <p>Settings</p>
