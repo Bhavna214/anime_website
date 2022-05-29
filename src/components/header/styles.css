@@ -181,3 +181,29 @@
     background-color: #f7f8f8;
 }
 
+.home__addIcon {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.home__signOut {
+    margin-top: 20px !important;
+    color: #5f6368 !important;
+    text-transform: capitalize !important;
+}
+
+.home__popover__footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 120%;
+    align-items: center;
+    color: #5f6368;
+    justify-content: center;
+    border-top: 1px solid #dadce0;
+    padding-top: 5px;
+}
+
+.home__popover__footer > span {
+    margin: 10px;
+}
