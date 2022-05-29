@@ -76,7 +76,7 @@ const Header = () => {
                                 <CameraAltOutlined className='home__camera' />
                             </div>
                         }>
-                            <Avatar className='header__avatar' />
+                            <Avatar className="home__avatar" />
                         </Badge>
                         <div className="home__text">
                             <div className="home__displayName">Creator</div>
@@ -97,6 +97,8 @@ const Header = () => {
 
                         <div className="home__popover_footer">
                             <p>Privacy Policy</p>
+                            <span>•</span>
+                            <p>Terms of service</p>
                         </div>
                     </div>
                 </div>
