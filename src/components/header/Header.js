@@ -3,7 +3,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import {Avatar, Button, makeStyles, Popover} from '@mui/material';
+import {Avatar, Badge, Button, Popover} from '@mui/material';
+import CameraAltOutlined from '@mui/icons-material/CameraAltOutlined';
+import PersonAddOutlined from '@mui/icons-material/PersonAddOutlined';
 import React from 'react'
 import logo from "../../assets/logo.png";
 import './styles.css'
@@ -50,20 +52,54 @@ const Header = () => {
             <NotificationsIcon/>
             <Avatar onClick={handleClick} />
 
-            <Popover 
-                open={open}
-                id={id}
-                onClose={handleClose}
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "center"
-                }}
-                transformOrigin={{
-                    vertical: "top"
-                }}
+            <Popover open={open}
+            id={id}
+            onClose={handleClose}
+            anchorEl={anchorEl}
+            anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center"
+            }}
+            transformOrigin={{
+                vertical: "top"
+            }}
             >
-                <h1>Hello</h1>
+                <div className="home__popoverContainer">
+                    <div className="home__popover__top">
+                        <Badge overlap='circle' 
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right'
+                        }}
+                        badgeContent={
+                            <div className='home__badge'>
+                                <CameraAltOutlined className='home__camera' />
+                            </div>
+                        }>
+                            <Avatar className='header__avatar' />
+                        </Badge>
+                        <div className="home__text">
+                            <div className="home__displayName">Creator</div>
+                            <div className="home__mail">user@gmail.com</div>
+                        </div>
+                        <div className="home_btn">Manage your google account</div>
+                    </div>
+                    
+                    <div className="home__popover_btm">
+                        <div className="home__addBtn">
+                            <PersonAddOutlined className="home__addIcon" />
+                            <p>Add another account</p> 
+                        </div>
+
+                        <Button variant="outlined" className="home__signOut">
+                            Sign Out
+                        </Button>
+
+                        <div className="home__popover_footer">
+                            <p>Privacy Policy</p>
+                        </div>
+                    </div>
+                </div>
             </Popover>
         </div>
     </div>
