@@ -1,0 +1,54 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.VideoThumb_thumbnail{
+    width: 230px;
+    height: 137px;
+    margin-bottom: 10px;
+}
+
+.VideoThumb_details{
+    display: flex;
+}
+
+.VideoThumb{
+    margin: 30px;
+    margin-right: 0;
+    width: 230px;
+    height: 236px;
+    cursor: pointer;
+}
+
+.VideoThumb_title{
+    font-size: 1.2rem;
+    max-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+.VideoThumb_Channel{
+    margin-left: 10px;
+}
+
+.VideoThumb_caption{
+    margin-top: 5px;
+}
+
+.VideoThumb_text{
+    font-size: 14px;
+    color: #ffffff !important;
+}
+
+.VideoThumb img{
+    box-shadow: 7px 7px 15px #c4bbdc;
+}
+

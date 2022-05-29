@@ -20,7 +20,10 @@ code {
   padding: 0;
 }
 .app{
-  /* display: flex; */
+  display: flex;
+}
+
+.home{
   color: #fff;
-  background-color: black;
+  background-color: #1b1921;
 }

@@ -1,0 +1,59 @@
+.watch{
+    background-color: #1b1921;
+    display: block;
+    color: white;
+    width: 100vw;
+    margin-left: 40px;
+}
+
+.user{
+    display: flex;
+    margin-top: 20px;
+}
+
+.avatar{
+    font-size: 30px !important;
+}
+
+.Info{
+    display: flex;
+    margin-top: 10px;
+    justify-content: first baseline;
+    margin: 20px;
+}
+
+.like{
+    margin-left: 50px;
+}
+
+.share{
+    margin-left: 50px;
+}
+
+.save{
+    margin-left: 50px;
+}
+
+.icons{
+    display: flex;
+    margin-left: 20px;
+}
+
+.caption{
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.userInfo{
+    margin-left: 10px;
+}
+
+.follow{
+    margin-left: 60px;
+}
+
+.watch_video{
+    box-shadow: 7px 7px 15px #c4bbdc;
+    margin-top: 10px;
+}

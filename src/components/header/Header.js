@@ -2,7 +2,6 @@
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import {Avatar, Button} from '@mui/material';
 import React from 'react'
@@ -15,6 +14,7 @@ const Header = () => {
         <div className='header__left'>
             <MenuIcon className="header__menuicon"/>
             <img className='header__logo' src={logo} alt="Animino"/>
+            <h3 className='header__name'>ANIMINO</h3>
         </div>
 
         <form className="header__center">
@@ -26,7 +26,6 @@ const Header = () => {
 
         <div className='header__right'>
             <VideoCallIcon/>
-            <AppsIcon/>
             <NotificationsIcon/>
             <Avatar/>
         </div>
