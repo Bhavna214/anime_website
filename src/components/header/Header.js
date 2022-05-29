@@ -78,14 +78,16 @@ const Header = () => {
                         }>
                             <Avatar className="home__avatar" />
                         </Badge>
+
                         <div className="home__text">
                             <div className="home__displayName">Creator</div>
                             <div className="home__mail">user@gmail.com</div>
                         </div>
-                        <div className="home_btn">Manage your google account</div>
+                        
+                        <div className="home__btn">Manage your google account</div>
                     </div>
                     
-                    <div className="home__popover_btm">
+                    <div className="home__popover__btm">
                         <div className="home__addBtn">
                             <PersonAddOutlined className="home__addIcon" />
                             <p>Add another account</p> 
@@ -95,7 +97,7 @@ const Header = () => {
                             Sign Out
                         </Button>
 
-                        <div className="home__popover_footer">
+                        <div className="home__popover__footer">
                             <p>Privacy Policy</p>
                             <span>•</span>
                             <p>Terms of service</p>
