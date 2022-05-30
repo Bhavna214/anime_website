@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material"
 import { useState } from 'react';
+import './styles.css';
 
 const Login = () => {
     const [loading, setLoading] = useState(false);
@@ -19,7 +20,7 @@ const Login = () => {
                         
                         <TextField className="login__input" id="outlined-basic" label="Password" variant="outlined" type="password" />
                         
-                        <div className="login__infotext">
+                        <div className="login__infoText">
                             Not your computer? Use guest mode to sign in privately?
                             <a href="/learnmore">Learn More</a>
                         </div>
