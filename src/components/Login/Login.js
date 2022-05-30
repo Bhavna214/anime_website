@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 
 const Login = () => {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     return (
         <div className="login background--white">
