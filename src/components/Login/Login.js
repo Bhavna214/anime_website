@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 
 const Login = () => {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     return (
         <div className="login background--white">
@@ -30,7 +30,7 @@ const Login = () => {
                                 Create Account
                             </Button>
 
-                            <Button className="login__button" color="primary" variant="conatined">
+                            <Button className="login__button" color="primary" variant="contained">
                                 Sign In
                             </Button>
                         </div>
