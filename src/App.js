@@ -2,10 +2,16 @@ import './App.css';
 import { Header, Sidebar, Main, MyProfile } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Watch1 from './components/Watch/Watch1';
+import Login from './components/Login/Login';
 function App() {
   return (
     <Router>
       <Switch>
+
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+
         <Route exact path='/'>
           <div className="home">
             <Header />
