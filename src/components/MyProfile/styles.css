@@ -1,0 +1,93 @@
+.follow__btn{
+    background-color: #0cdde4 !important;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.channel__art{
+    width: 100%;
+    
+}
+.channel__avatar{
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: 20px;
+}
+.channel__details{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.channel__avatarWrap{
+    display: block;
+    align-items: center;
+}
+.channel__title{
+    font-size: 26px !important;
+    font-weight: normal !important;
+}
+.channel_content{
+    height: 100%;
+    background-color: #1b1921;
+    overflow: auto;
+}
+
+.channel__detailsErap{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.channel__subBtn{
+    height: 40px !important;
+}
+.channel__links{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-right: 300px;
+    margin-left: 50px;
+    margin-top: 20px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+.channel{
+    background-color: #1b1921;
+    color: white;
+    overflow-y: scroll ;
+}
+
+.user_title{
+    font-size: 28px;
+}
+.VideoThumb__title{
+    font-size: 15px;
+}
+
+.channel__link{
+    color:white;
+    opacity: 0.5;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+}
+.channel__link:hover{
+    opacity: 1;
+}
+
+.channel__link--active{
+    opacity: 1;
+    
+
+}
+
+.channel__contentWrapper{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}

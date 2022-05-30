@@ -12,7 +12,7 @@ const Watch1 = () => {
         <div className="watch">
             <div className="user">
                 <div className="avatar">
-                    <Avatar className='avatar' onClick={handleAvatarRedirect}/>
+                    <Avatar style={{cursor:'pointer'}} className='watch__Avatar' onClick={handleAvatarRedirect}/>
                 </div>
 
                 <div className="userInfo">
