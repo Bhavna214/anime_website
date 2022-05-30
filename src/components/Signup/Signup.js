@@ -1,9 +1,20 @@
 import React from 'react';
 import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
 import { useState } from 'react';
+import './styles.css'
 
-const Signup = () => {
-  const [loading, setLoading] = useState(false)
+const Signup = ({setShowSignUp}) => {
+  const [loading, setLoading] = useState(false);
+
+  const toggleSignUp = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+        setLoading(false);
+        setShowSignUp(false);
+    },1500)
+  };
+
   return (
     <div className='signup__container'>
       <div className={`signup ${loading && "login__fade"}`}>
@@ -24,9 +35,9 @@ const Signup = () => {
               <TextField id='outlined-basic' fullWidth label='Email' type='email' variant='outlined' helperText="You can use numbers, letters and periods" />
 
               <div className="signup__passwordInputs">
-                <div className="signup__passwordInput">
-                <TextField id='outlined-basic' label='Password' type='password' variant='outlined' />
-                <TextField id='outlined-basic' label='Confirm Password' type='password' variant='outlined' />
+                <div className="signup__passwordWrapper">
+                <TextField id='outlined-basic' className='signup__passwordInput' label='Password' type='password' variant='outlined' />
+                <TextField id='outlined-basic' className='signup__passwordInput' label='Confirm Password' type='password' variant='outlined' />
                 </div>
                 <p className='signup__helpertext'>You can use 8 or more characters with a mix of letters, numbers and symbols</p>
 
@@ -34,7 +45,7 @@ const Signup = () => {
               </div>
 
               <div className='signup__buttons' >
-                <Button className='signup__button' variant='text' color='primary'>Sign In instead</Button>
+                <Button className='signup__button' variant='text' color='primary' onClick={toggleSignUp}>Sign In instead</Button>
                 <Button className='signup__button' variant='contained' color='primary'>Create</Button>
               </div>
             </div> 

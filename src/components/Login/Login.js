@@ -19,7 +19,7 @@ const Login = () => {
     return (
         <div className="login">
             {showSignUp ? (
-                <Signup />
+                <Signup setShowSignUp={setShowSignUp} />
             ) : (
             <div className="login__content">
                 {loading && <div className={loading && "login__loading"}/>}
