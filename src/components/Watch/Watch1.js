@@ -21,7 +21,7 @@ const Watch1 = () => {
                 </div>
 
                 <div className="follow">
-                    <Button variant="contained" className='followButton'>FOLLOW</Button>
+                    <Button variant="contained" className='follow_btn' style={{backgroundColor:"#0cdde4"}}>FOLLOW</Button>
                 </div>
             </div>
 

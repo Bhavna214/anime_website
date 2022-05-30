@@ -1,4 +1,4 @@
-import { Avatar } from '@mui/material'
+import { Avatar, Button } from '@mui/material'
 import React from 'react'
 import img from '../../assets/Thumbnail3.jpg'
 import './styles.css'
@@ -19,7 +19,7 @@ const MyProfile = () => {
             </h1>
             
             <p className="VideoThumb_text watch_subCount">10K Followers</p>
-            <button className='follow__btn watch__subBtn channel__subBtn' variant='contained'>FOLLOW</button>
+            <Button className='follow__btn watch__subBtn channel__subBtn' variant='contained'>FOLLOW</Button>
        
         </div>
             </div>

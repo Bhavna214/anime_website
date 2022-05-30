@@ -1,11 +1,14 @@
 import {Home, OndemandVideo, Settings, Subscriptions, ThumbUpAltOutlined, Whatshot } from '@mui/icons-material'
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import './styles.css'
-const Sidebar = () => {
+const Sidebar = ({changeWidth}) => {
+    const history=useHistory();
+    const handleClick=()=>history.push("/")
   return (
     <div className='sidebar'>
         <div classname="sidebar__buttons">
-            <div className='sidebar__btn sidebar__btn--active'>
+            <div onClick={handleClick} className='sidebar__btn sidebar__btn--active'>
                 <Home className="sidebar__icon"/>
                 <p>Home</p>
             </div>

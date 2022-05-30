@@ -91,3 +91,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.VideoThumb__channelView{
+    margin-top: 5px;
+}
+
+.VideoThumb_details{
+    justify-content: space-between;
+    margin-right: 35px;
+}
