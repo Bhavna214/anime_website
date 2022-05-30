@@ -90,6 +90,7 @@
 }
 
 .login__loading {
+    animation: a-s 500ms 500ms 1 forwards;
     height: 4px;
     background-color: #f1f1f1;
     width: 114%;
@@ -98,10 +99,10 @@
     margin: -30px -10px 30px -10px;
     position: relative;
     opacity: 0;
-    animation: a-s 500ms 500ms 1 forwards;
 }
 
 .login__loading::before {
+    animation: a-1b 5s 500ms linear forwards;
     background-color: #3684eb;
     content: "";
     display: block;
@@ -109,7 +110,6 @@
     position: absolute;
     transform: translateX(-300px);
     width: 100%;
-    animation: a-1b 5s 500ms linear forwards;
 }
 
 @keyframes a-s {
@@ -152,4 +152,8 @@
     100% {
         transform: translateX(-5px);
     }
+}
+
+.login__fade {
+    opacity: 0.5;
 }
