@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
 import { useState } from 'react';
 import './styles.css';
+import {auth} from '../../lib/firebase';
 
 const initialFormData = {
   firstName: "",
