@@ -9,6 +9,8 @@ import PersonAddOutlined from '@mui/icons-material/PersonAddOutlined';
 import React from 'react'
 import logo from "../../assets/logo.png";
 import './styles.css'
+import { useAppContext } from '../../context/appContext';
+import { auth } from '../../lib/firebase';
 
 // const useStyles = makeStyles((theme)=>({
 //     large: {
@@ -31,6 +33,8 @@ const Header = () => {
 
     const open = Boolean(anchorEl)
     const id = open ? "simple popover" : undefined;
+
+    const {currentUser} = useAppContext()
 
   return (
     <div className="header">
@@ -80,8 +84,8 @@ const Header = () => {
                         </Badge>
 
                         <div className="home__text">
-                            <div className="home__displayName">Creator</div>
-                            <div className="home__mail">user@gmail.com</div>
+                            <div className="home__displayName">{currentUser?.displayName}</div>
+                            <div className="home__mail">{currentUser?.email}</div>
                         </div>
                         
                         <div className="home__btn">Manage your google account</div>
@@ -93,7 +97,7 @@ const Header = () => {
                             <p>Add another account</p> 
                         </div>
 
-                        <Button variant="outlined" className="home__signOut">
+                        <Button variant="outlined" className="home__signOut" onClick={() => auth.signOut()}>
                             Sign Out
                         </Button>
 
