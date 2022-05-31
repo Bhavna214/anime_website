@@ -3,8 +3,18 @@ import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
 import { useState } from 'react';
 import './styles.css'
 
+const initialFormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  confirmPassword: ""
+}
+
 const Signup = ({setShowSignUp}) => {
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState(initialFormData);
+  const [checked, setChecked] = useState(false);
 
   const toggleSignUp = () => {
     setLoading(true);
@@ -29,19 +39,41 @@ const Signup = ({setShowSignUp}) => {
 
             <div className='signup__inputs'>
               <div className='signup__nameInputs'>
-                <TextField id='outlined-basic' className='signup__nameInput' label='First Name' type='name' variant='outlined' />
-                <TextField id='outlined-basic' className='signup__nameInput' label='Last Name' type='name' variant='outlined' />
+                <TextField id='outlined-basic' className='signup__nameInput' label='First Name' type='name' variant='outlined' value={formData.firstName} onChange={(e)=>{
+                  setFormData({
+                    ...formData,
+                    firstName: e.target.value}
+                  )}} />
+                <TextField id='outlined-basic' className='signup__nameInput' label='Last Name' type='name' variant='outlined' value={formData.lastName} onChange={(e)=>{
+                  setFormData({
+                    ...formData,
+                    lastName: e.target.value}
+                  )}} />
               </div>
-              <TextField id='outlined-basic' fullWidth label='Email' type='email' variant='outlined' helperText="You can use numbers, letters and periods" />
+              <TextField id='outlined-basic' fullWidth label='Email' type='email' variant='outlined' helperText="You can use numbers, letters and periods" value={formData.email} onChange={(e)=>{
+                  setFormData({
+                    ...formData,
+                    email: e.target.value}
+                  )}} />
 
               <div className="signup__passwordInputs">
                 <div className="signup__passwordWrapper">
-                <TextField id='outlined-basic' className='signup__passwordInput' label='Password' type='password' variant='outlined' />
-                <TextField id='outlined-basic' className='signup__passwordInput' label='Confirm Password' type='password' variant='outlined' />
+                <TextField id='outlined-basic' className='signup__passwordInput' label='Password' type={checked ? 'text':'password'} variant='outlined' value={formData.password} onChange={(e)=>{
+                  setFormData({
+                    ...formData,
+                    password: e.target.value}
+                  )}} />
+                <TextField id='outlined-basic' className='signup__passwordInput' label='Confirm Password' type={checked ? 'text':'password'} variant='outlined' value={formData.confirmPassword} onChange={(e)=>{
+                  setFormData({
+                    ...formData,
+                    confirmPassword: e.target.value}
+                  )}} />
                 </div>
                 <p className='signup__helpertext'>You can use 8 or more characters with a mix of letters, numbers and symbols</p>
 
-                <FormControlLabel control={<Checkbox color='primary' />} label="Show Password" />
+                <FormControlLabel control={<Checkbox checked={checked} color='primary' onClick={() => {
+                  setChecked(!checked)
+                }} />} label="Show Password" />
               </div>
 
               <div className='signup__buttons' >
