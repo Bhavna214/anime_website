@@ -31,9 +31,9 @@ const Signup = ({setShowSignUp}) => {
   const createAccount = (e) => {
     e.preventDefault();
     setLoading(true);
-    const err = formData.password !== formData.confirmPassword;
+    const err = formData.password === formData.confirmPassword;
     
-    if(err) {
+    if(!err) {
       setPasswordError({state:true,msg:'Passwords do not match'});
       setFormData({...formData, confirmPassword:''});
       setLoading(false);
