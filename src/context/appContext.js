@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 const AppContext = createContext();
 
@@ -12,7 +13,7 @@ export const AppContextProvider = ({ children }) => {
     const [appState, setAppState] = useState('empty')
 
     useEffect(() => {
-        auth.onAuthStateChanged((user) => {
+        onAuthStateChanged(auth,(user) => {
             if(user) {
                 setAppState('home')
                 setCurrentUser(user)

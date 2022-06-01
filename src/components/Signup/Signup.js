@@ -4,6 +4,8 @@ import { useState } from 'react';
 import './styles.css';
 import {auth} from '../../lib/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import logo from '../../assets/logo.png';
+import logo1 from '../../assets/logo1.png';
 
 const initialFormData = {
   firstName: "",
@@ -84,10 +86,10 @@ const Signup = ({setShowSignUp}) => {
 
         <div className="signup__container">
           <div className="signup__left">
-            <img className='login__logo' src='https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png' alt='Google' />
+            <img className='login__logo' src={logo} alt='Animino' />
 
-            <h1 className='signup__heading'>Create your Google Account</h1>
-            <p className='sigup__subheading'>Continue to Gmail</p>
+            <h1 className='signup__heading'>Create your Animino Account</h1>
+            <p className='signup__subheading'>Continue to Animino</p>
 
             <div className='signup__inputs'>
               <div className='signup__nameInputs'>
@@ -129,14 +131,14 @@ const Signup = ({setShowSignUp}) => {
               </div>
 
               <div className='signup__buttons' >
-                <Button className='signup__button' variant='text' color='primary' onClick={toggleSignUp}>Sign In instead</Button>
-                <Button className='signup__button' variant='contained' color='primary' onClick={createAccount} disabled={disabled} >Create</Button>
+                <Button className='signup__button' variant='text' onClick={toggleSignUp}>Sign In instead</Button>
+                <Button className='signup__button' variant='contained' onClick={createAccount} disabled={disabled} >Create</Button>
               </div>
             </div> 
           </div>
           <figure className="signup__figure">
-            <img className="signup__figureImg" src='https://ssl.gstatic.com/accounts/signup/glif/account.svg' alt='Account' />
-            <figcaption className='signup__figcaption'>One account. All of google working for you</figcaption>
+            <img className="signup__figureImg" src={logo1} alt='Account' />
+            <figcaption className='signup__figcaption'>One stop solution for all your anime needs.</figcaption>
           </figure>
         </div>
       </div>

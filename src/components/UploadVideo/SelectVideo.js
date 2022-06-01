@@ -19,7 +19,7 @@ const SelectVideo = () => {
     const [videoUploaded, setVideoUploaded]= useState(false)
     const [thumbnailUploaded, setThumbnailUploaded] = useState(false)
 
-    const [currentUser] = useAppContext();
+    const {currentUser} = useAppContext();
 
     const createID = () => setId(uuidv4())
 

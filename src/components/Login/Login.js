@@ -4,6 +4,7 @@ import './styles.css';
 import Signup from './../Signup/Signup';
 import { auth } from "../../lib/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import logo  from './../../assets/logo.png';
 
 
 const Login = () => {
@@ -51,9 +52,9 @@ const Login = () => {
             <div className="login__content">
                 {loading && <div className={loading && "login__loading"}/>}
                 <div className={`login__wrapper ${loading && "login__fade"}`}>
-                    <img className="login__logo" src="https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google"></img>
+                    <img className="login__logo" src={logo} alt='Animino' />
                     <p className="login__title">Sign In</p>
-                    <p className="login__subtitle">Continue to Gmail</p>
+                    <p className="login__subtitle">Continue to Animino</p>
 
                     <form className="login__form">
                         
@@ -67,11 +68,11 @@ const Login = () => {
                         </div>
 
                         <div className="login__buttons">
-                            <Button className="login__button" color="primary" onClick={toggleSignUp}>
+                            <Button className="login__button" onClick={toggleSignUp}>
                                 Create Account
                             </Button>
 
-                            <Button className="login__button" color="primary" variant="contained" onClick={signin}>
+                            <Button className="login__button" variant="contained" onClick={signin}>
                                 Sign In
                             </Button>
                         </div>
