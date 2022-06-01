@@ -12,6 +12,7 @@ import './styles.css'
 import { useAppContext } from '../../context/appContext';
 import { auth } from '../../lib/firebase';
 import { signOut } from 'firebase/auth';
+import { useHistory } from 'react-router-dom';
 
 // const useStyles = makeStyles((theme)=>({
 //     large: {
@@ -21,6 +22,9 @@ import { signOut } from 'firebase/auth';
 // }))
 
 const Header = () => {
+
+    const history = useHistory();
+    const handleUploadVideo = () => history.push('/UploadVideo')
     // const classes= useStyles();
     const [anchorEl,setAnchorEl] = React.useState(null);
 
@@ -53,7 +57,7 @@ const Header = () => {
         </form>
 
         <div className='header__right'>
-            <VideoCallIcon/>
+            <VideoCallIcon onClick={handleUploadVideo}/>
             <NotificationsIcon/>
             <Avatar onClick={handleClick} />
 

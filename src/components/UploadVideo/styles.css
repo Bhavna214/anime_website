@@ -1,0 +1,98 @@
+.SelectVideo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b1921;
+    height: 100%;
+    border-top: 2px solid aliceblue;
+    color: aliceblue;
+}
+
+.SelectVideo_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+}
+
+.SelectVideo_header{
+    margin-top: 50px;
+    color: rgb(186, 152, 236);
+    text-align: center;
+}
+
+.SelectVideo_publishIcon{
+    margin:50px;
+    font-size: 4rem !important;
+}
+
+.customFile_input{
+    margin:20px;
+    outline: none;
+}
+
+.customFile_input::-webkit-file-upload-button{
+    visibility: hidden;
+    outline: none;
+}
+
+.customFile_input::before{
+    margin-left: 70px;
+    margin-top: 20px;
+    content: "SELECT FILES";
+    color: #2e2052;
+    display: inline-block;
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Roboto";
+}
+
+.SelectVideo_text{
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 40px;
+}
+
+.SelectVideo_input{
+    color: aliceblue;
+    background-color: aliceblue;
+    width: 700px;
+    margin:20px;
+}
+
+.SelectVideo_input label{
+    color: rgb(81, 54, 108);
+    font-weight: 600;
+}
+
+.customFile_thumbnail::-webkit-file-upload-button{
+    visibility: hidden;
+    outline: none;
+}
+
+.customFile_thumbnail::before{
+    margin-left: 70px;
+    margin-top: 20px;
+    content: "SELECT THUMBNAIL";
+    color: #2e2052;
+    display: inline-block;
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Roboto";
+}

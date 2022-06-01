@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Sidebar, Main, MyProfile } from './components';
+import { Header, Sidebar, Main, MyProfile, SelectVideo } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Watch1 from './components/Watch/Watch1';
 import Login from './components/Login/Login';
@@ -39,6 +39,11 @@ function App() {
                 <Sidebar />
                 <MyProfile/>
               </div>
+          </Route>
+
+          <Route path='/UploadVideo'>
+            <Header/>
+            <SelectVideo/>
           </Route>
         </div>
         }
