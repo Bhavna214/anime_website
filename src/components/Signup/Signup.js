@@ -3,7 +3,7 @@ import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
 import { useState } from 'react';
 import './styles.css';
 import {auth} from '../../lib/firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import logo from '../../assets/logo.png';
 import logo1 from '../../assets/logo1.png';
 
@@ -49,7 +49,7 @@ const Signup = ({setShowSignUp}) => {
 
     createUserWithEmailAndPassword(auth,formData.email,formData.password)
     .then(() => {
-      auth.currentUser.updateProfile({
+      updateProfile(auth.currentUser,{
         displayName: `${formData.firstName} ${formData.lastName}`
       })
       .then(() => {
