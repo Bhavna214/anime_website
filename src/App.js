@@ -6,7 +6,10 @@ import Login from './components/Login/Login';
 import { useAppContext } from './context/appContext';
 
 function App() {
-  const appState = useAppContext()
+  const {appState} = useAppContext()
+
+  console.log(appState)
+
   return (
     <Router>
       <Switch>

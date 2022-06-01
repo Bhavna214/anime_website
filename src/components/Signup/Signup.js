@@ -3,6 +3,7 @@ import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
 import { useState } from 'react';
 import './styles.css';
 import {auth} from '../../lib/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const initialFormData = {
   firstName: "",
@@ -44,7 +45,7 @@ const Signup = ({setShowSignUp}) => {
       setEmailError({state:false,msg:''});
     }
 
-    auth.createUserWithEmailAndPassword(formData.email,formData.password)
+    createUserWithEmailAndPassword(auth,formData.email,formData.password)
     .then(() => {
       auth.currentUser.updateProfile({
         displayName: `${formData.firstName} ${formData.lastName}`

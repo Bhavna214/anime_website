@@ -3,6 +3,8 @@ import { useState } from 'react';
 import './styles.css';
 import Signup from './../Signup/Signup';
 import { auth } from "../../lib/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 
 const Login = () => {
     const [loading, setLoading] = useState(false);
@@ -25,7 +27,7 @@ const Login = () => {
         e.preventDefault();
         setLoading(true)
 
-        auth.signInWithEmailAndPassword(email,password).then(() => {
+        signInWithEmailAndPassword(auth,email,password).then(() => {
             setMailError({state:false,msg:''});
             setPasswordError({state:false, msg:''});
         }).catch((err) => {

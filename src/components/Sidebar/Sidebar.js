@@ -7,7 +7,7 @@ const Sidebar = ({changeWidth}) => {
     const handleClick=()=>history.push("/")
   return (
     <div className='sidebar'>
-        <div classname="sidebar__buttons">
+        <div className="sidebar__buttons">
             <div onClick={handleClick} className='sidebar__btn sidebar__btn--active'>
                 <Home className="sidebar__icon"/>
                 <p>Home</p>
