@@ -8,42 +8,43 @@ import { useAppContext } from './context/appContext';
 function App() {
   const {appState} = useAppContext()
 
-  console.log(appState)
-
   return (
     <Router>
       <Switch>
-        <Route exact path='/login'>
-          <Login />
-        </Route>
-
-        <Route exact path='/'>
-          <div className="home">
-            <Header />
-            <div className="app">
-              <Sidebar />
-              <Main />
+        {appState === 'home' && 
+        <div>
+          <Route exact path='/'>
+            <div className="home">
+              <Header />
+              <div className="app">
+                <Sidebar />
+                <Main />
+              </div>
             </div>
-          </div>
-        </Route>
+          </Route>
 
-        <Route path='/watch'>
-        <div className="home">
-            <Header />
-            <div className="app">
-              <Sidebar />
-              <Watch1 />
+          <Route path='/watch'>
+            <div className="home">
+              <Header />
+              <div className="app">
+                <Sidebar />
+                <Watch1 />
+              </div>
             </div>
-          </div>
-        </Route>
+          </Route>
 
-        <Route path='/MyProfile'>
-          <Header/>
-          <div className="app">
-            <Sidebar />
-            <MyProfile/>
-          </div>
-        </Route>
+          <Route path='/MyProfile'>
+            <Header/>
+              <div className="app">
+                <Sidebar />
+                <MyProfile/>
+              </div>
+          </Route>
+        </div>
+        }
+
+
+        {appState === 'login' && <Login /> }
 
       </Switch>
     </Router>

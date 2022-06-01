@@ -11,6 +11,7 @@ import logo from "../../assets/logo.png";
 import './styles.css'
 import { useAppContext } from '../../context/appContext';
 import { auth } from '../../lib/firebase';
+import { signOut } from 'firebase/auth';
 
 // const useStyles = makeStyles((theme)=>({
 //     large: {
@@ -97,7 +98,7 @@ const Header = () => {
                             <p>Add another account</p> 
                         </div>
 
-                        <Button variant="outlined" className="home__signOut" onClick={() => auth.signOut()}>
+                        <Button variant="outlined" className="home__signOut" onClick={() => signOut(auth)}>
                             Sign Out
                         </Button>
 
