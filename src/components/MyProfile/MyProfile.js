@@ -5,7 +5,7 @@ import './styles.css'
 import VideoThumb from '../Main/VideoThumb.js';
 
 
-const MyProfile = () => {
+const MyProfile = (props) => {
   return (
     <div className='channel'>
         <img className='channel__art' src={img} alt="Channel Art"></img>
@@ -43,11 +43,11 @@ const MyProfile = () => {
         </div>
         <div className='channel__content'>
             <div className='channel__contentWrapper'>
-            <VideoThumb channelView/>
-            <VideoThumb channelView/>
-            <VideoThumb channelView/>
-            <VideoThumb channelView/>
-            <VideoThumb channelView/>
+            <VideoThumb channelView url="https://wallup.net/wp-content/uploads/2015/12/215040-anime_girls-anime-artwork-Fate_Series-Tohsaka_Rin.jpg" title="Death Note"/>
+            <VideoThumb channelView url="https://wallup.net/wp-content/uploads/2015/12/215040-anime_girls-anime-artwork-Fate_Series-Tohsaka_Rin.jpg" title="Death Note"/>
+            <VideoThumb channelView url="https://wallup.net/wp-content/uploads/2015/12/215040-anime_girls-anime-artwork-Fate_Series-Tohsaka_Rin.jpg" title="Death Note"/>
+            <VideoThumb channelView url="https://wallup.net/wp-content/uploads/2015/12/215040-anime_girls-anime-artwork-Fate_Series-Tohsaka_Rin.jpg" title="Death Note"/>
+            <VideoThumb channelView url="https://wallup.net/wp-content/uploads/2015/12/215040-anime_girls-anime-artwork-Fate_Series-Tohsaka_Rin.jpg" title="Death Note"/>
 
             </div>
         </div>
